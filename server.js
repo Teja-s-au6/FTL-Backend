@@ -14,6 +14,10 @@ app.use(cors());
 const apiRoutes = require("./routes/apiRoutes")
 app.use(apiRoutes)
 
+app.get("/", function(req, res) {
+    res.status(200).send("Backend is working and this project is done by Teja S")
+})
+
 app.listen(port, () => {
     console.log("server started");
 })
